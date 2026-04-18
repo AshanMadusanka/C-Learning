@@ -1,13 +1,21 @@
 #include <iostream>
+
+void age(int age);
 int main() {
 
-    auto lang = "C++";
-    std::cout << "Hello and welcome to " << lang << "!\n";
-
-    for (int i = 1; i <= 5; i++) {
-
-        std::cout << "i = " << i << std::endl;
-    }
+    age(2);
 
     return 0;
+}
+
+void age(int age) {
+
+    if (age > 18) {
+
+        std::cout << "You entered " << age << " years old!\n";
+    }
+    else {
+        std::cout << "You cant! " << age << " years old!\n";
+    }
+
 }
