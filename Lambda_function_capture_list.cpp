@@ -12,11 +12,24 @@ int main() {
 
     func();
 */
-    int a{10};
+  /*  int a{10};
     int b{50};
 
     auto func = [a,b]() {
         std::cout << "Inner Value:  " <<  a << std::endl;
+    };
+
+    for (int i = 0; i < 5; i++) {
+        std::cout << "Outer Value: " << a << std::endl;
+        func();
+        a++;
+    }
+*/
+    int a{10};
+    int b{50};
+
+    auto func = [&a,b]() {
+        std::cout << "Inner Value: " <<  a << std::endl;
     };
 
     for (int i = 0; i < 5; i++) {
